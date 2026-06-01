@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vehicle Management System</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js"></script>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -97,19 +95,21 @@
         ::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.3); border-radius: 3px; }
     </style>
   <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  <script src="/_sdk/telemetry_sdk.js"></script></head>
  <body class="h-full bg-main overflow-hidden">
-  <div id="app" class="h-full w-full overflow-auto"><!-- TOAST -->
+  <div id="app" class="h-full w-full overflow-auto">
+   <!-- TOAST -->
    <div id="toast-container" class="fixed top-4 right-4 z-[9999] flex flex-col gap-2"></div><!-- HOME SCREEN -->
-   <div id="screen-home" class="h-full w-full flex flex-col overflow-y-auto">
-    <!-- Header -->
+   <div id="screen-home" class="h-full w-full flex flex-col overflow-y-auto"><!-- Header -->
     <header class="glass-strong sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
      <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-lg btn-primary flex items-center justify-center"><i data-lucide="truck" class="w-6 h-6 text-white"></i>
+      <div class="w-10 h-10 rounded-lg btn-primary flex items-center justify-center">
+       <i data-lucide="truck" class="w-6 h-6 text-white"></i>
       </div><span class="font-bold text-gray-800">VMS</span>
      </div>
-     <div class="flex items-center gap-3">
-      <button onclick="showScreen('login')" class="btn-secondary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="log-in" class="w-4 h-4"></i> Sign In </button> <button onclick="showScreen('register')" class="btn-primary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="user-plus" class="w-4 h-4"></i> Register </button>
+     <div class="flex items-center gap-3"><button onclick="showScreen('login')" class="btn-secondary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="log-in" class="w-4 h-4"></i> Sign In </button> <button onclick="showScreen('register')" class="btn-primary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="user-plus" class="w-4 h-4"></i> Register </button>
      </div>
     </header><!-- Hero -->
     <section class="px-6 py-12 flex-1">
@@ -118,14 +118,14 @@
        <div class="fade-in">
         <h1 id="home-title" class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Vehicle Management System</h1>
         <p id="home-subtitle" class="text-gray-600 text-lg mb-6">Manage your fleet efficiently with real-time tracking, maintenance scheduling, fuel monitoring, and comprehensive reporting.</p>
-        <div class="flex flex-col sm:flex-row gap-3">
-         <button onclick="showScreen('portal')" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-2"> <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Enter Portal </button> <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})" class="btn-secondary px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-2"> <i data-lucide="arrow-down" class="w-5 h-5"></i> Learn More </button>
+        <div class="flex flex-col sm:flex-row gap-3"><button onclick="showScreen('portal')" class="btn-primary px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-2"> <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Enter Portal </button> <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})" class="btn-secondary px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-2"> <i data-lucide="arrow-down" class="w-5 h-5"></i> Learn More </button>
         </div>
        </div>
        <div class="glass-card rounded-2xl p-8 fade-in">
         <div class="space-y-4">
          <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"><i data-lucide="zap" class="w-6 h-6 text-green-600"></i>
+          <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+           <i data-lucide="zap" class="w-6 h-6 text-green-600"></i>
           </div>
           <div>
            <p class="font-semibold text-gray-800">Real-Time Tracking</p>
@@ -133,7 +133,8 @@
           </div>
          </div>
          <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6 text-blue-600"></i>
+          <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+           <i data-lucide="shield-check" class="w-6 h-6 text-blue-600"></i>
           </div>
           <div>
            <p class="font-semibold text-gray-800">Secure Access</p>
@@ -141,7 +142,8 @@
           </div>
          </div>
          <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center"><i data-lucide="bar-chart-2" class="w-6 h-6 text-purple-600"></i>
+          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
+           <i data-lucide="bar-chart-2" class="w-6 h-6 text-purple-600"></i>
           </div>
           <div>
            <p class="font-semibold text-gray-800">Detailed Reports</p>
@@ -155,37 +157,43 @@
        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Features</h2>
        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center mb-3"><i data-lucide="truck" class="w-6 h-6 text-indigo-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center mb-3">
+          <i data-lucide="truck" class="w-6 h-6 text-indigo-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Vehicle Management</p>
          <p class="text-sm text-gray-500">Add, track, and manage all vehicles in your fleet with detailed information</p>
         </div>
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center mb-3"><i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center mb-3">
+          <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Driver Assignment</p>
          <p class="text-sm text-gray-500">Register drivers and assign them to vehicles efficiently</p>
         </div>
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center mb-3"><i data-lucide="map-pin" class="w-6 h-6 text-green-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center mb-3">
+          <i data-lucide="map-pin" class="w-6 h-6 text-green-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Trip Scheduling</p>
          <p class="text-sm text-gray-500">Plan, schedule, and monitor trips with real-time updates</p>
         </div>
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center mb-3"><i data-lucide="fuel" class="w-6 h-6 text-amber-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center mb-3">
+          <i data-lucide="fuel" class="w-6 h-6 text-amber-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Fuel Management</p>
          <p class="text-sm text-gray-500">Track fuel consumption and costs across your fleet</p>
         </div>
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center mb-3"><i data-lucide="wrench" class="w-6 h-6 text-red-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center mb-3">
+          <i data-lucide="wrench" class="w-6 h-6 text-red-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Maintenance Tracking</p>
          <p class="text-sm text-gray-500">Schedule maintenance and manage service reminders</p>
         </div>
         <div class="glass-card rounded-2xl p-5 stat-card">
-         <div class="w-10 h-10 rounded-xl bg-cyan-100 flex items-center justify-center mb-3"><i data-lucide="bar-chart-2" class="w-6 h-6 text-cyan-600"></i>
+         <div class="w-10 h-10 rounded-xl bg-cyan-100 flex items-center justify-center mb-3">
+          <i data-lucide="bar-chart-2" class="w-6 h-6 text-cyan-600"></i>
          </div>
          <p class="font-semibold text-gray-800 mb-1">Analytics &amp; Reports</p>
          <p class="text-sm text-gray-500">Generate comprehensive reports and export data</p>
@@ -203,7 +211,8 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
        <div>
         <div class="flex items-center gap-2 mb-3">
-         <div class="w-8 h-8 rounded-lg btn-primary flex items-center justify-center"><i data-lucide="truck" class="w-4 h-4 text-white"></i>
+         <div class="w-8 h-8 rounded-lg btn-primary flex items-center justify-center">
+          <i data-lucide="truck" class="w-4 h-4 text-white"></i>
          </div><span class="font-bold text-gray-800">VMS</span>
         </div>
         <p class="text-sm text-gray-500">Professional vehicle fleet management solution</p>
@@ -235,52 +244,62 @@
       </div>
       <div class="border-t border-gray-200/50 pt-4 flex items-center justify-between text-sm text-gray-500">
        <p>© 2024 Vehicle Management System. All rights reserved.</p>
-       <div class="flex gap-4">
-        <a href="#" class="hover:text-indigo-600"><i data-lucide="facebook" class="w-4 h-4"></i></a> <a href="#" class="hover:text-indigo-600"><i data-lucide="twitter" class="w-4 h-4"></i></a> <a href="#" class="hover:text-indigo-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+       <div class="flex gap-4"><a href="#" class="hover:text-indigo-600"><i data-lucide="facebook" class="w-4 h-4"></i></a> <a href="#" class="hover:text-indigo-600"><i data-lucide="twitter" class="w-4 h-4"></i></a> <a href="#" class="hover:text-indigo-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
        </div>
       </div>
      </div>
     </footer>
    </div><!-- PORTAL -->
    <div id="screen-portal" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
-    <div class="glass-strong rounded-3xl p-10 max-w-2xl w-full shadow-xl"><button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
+    <div class="glass-strong rounded-3xl p-10 max-w-2xl w-full shadow-xl">
+     <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Select Portal</h2>
-     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><button onclick="selectPortal('user')" class="glass-card rounded-2xl p-6 text-left hover:shadow-lg transition-all stat-card">
-       <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center mb-3"><i data-lucide="user" class="w-6 h-6 text-indigo-600"></i>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <button onclick="selectPortal('user')" class="glass-card rounded-2xl p-6 text-left hover:shadow-lg transition-all stat-card">
+       <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center mb-3">
+        <i data-lucide="user" class="w-6 h-6 text-indigo-600"></i>
        </div><h3 class="font-semibold text-gray-800">User Panel</h3><p class="text-sm text-gray-500 mt-1">Driver &amp; passenger access</p></button> <button onclick="selectPortal('admin')" class="glass-card rounded-2xl p-6 text-left hover:shadow-lg transition-all stat-card">
-       <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-3"><i data-lucide="shield" class="w-6 h-6 text-purple-600"></i>
+       <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-3">
+        <i data-lucide="shield" class="w-6 h-6 text-purple-600"></i>
        </div><h3 class="font-semibold text-gray-800">Admin Panel</h3><p class="text-sm text-gray-500 mt-1">Fleet management access</p></button>
      </div>
     </div>
    </div><!-- REGISTER -->
    <div id="screen-register" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
-    <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl"><button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
+    <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl">
+     <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6">Create Account</h2>
-     <form id="register-form" onsubmit="handleRegister(event)"><label for="reg-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label> <input id="reg-username" type="text" placeholder="Enter username" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label> <input id="reg-email" type="email" placeholder="Enter email" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label> <input id="reg-password" type="password" placeholder="Enter password" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-role" class="block text-sm font-medium text-gray-700 mb-1">Role</label> <select id="reg-role" class="w-full px-4 py-3 rounded-xl mb-6"> <option value="user">Driver / User</option> <option value="admin">Administrator</option> </select> <button type="submit" class="btn-primary w-full py-3 rounded-xl font-medium mb-3">Register</button>
+     <form id="register-form" onsubmit="handleRegister(event)">
+      <label for="reg-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label> <input id="reg-username" type="text" placeholder="Enter username" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label> <input id="reg-email" type="email" placeholder="Enter email" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label> <input id="reg-password" type="password" placeholder="Enter password" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="reg-role" class="block text-sm font-medium text-gray-700 mb-1">Role</label> <select id="reg-role" class="w-full px-4 py-3 rounded-xl mb-6"> <option value="user">Driver / User</option> <option value="admin">Administrator</option> </select> <button type="submit" class="btn-primary w-full py-3 rounded-xl font-medium mb-3">Register</button>
       <p class="text-sm text-center text-gray-600">Already have an account? <button type="button" onclick="showScreen('login')" class="text-indigo-600 hover:text-indigo-700 font-medium">Sign In</button></p>
      </form>
     </div>
    </div><!-- LOGIN -->
    <div id="screen-login" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
-    <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl"><button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
+    <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl">
+     <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6">Sign In</h2>
-     <form id="login-form" onsubmit="handleLogin(event)"><label for="login-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label> <input id="login-username" type="text" placeholder="Enter username" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label> <input id="login-password" type="password" placeholder="Enter password" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="login-role" class="block text-sm font-medium text-gray-700 mb-1">Role</label> <select id="login-role" class="w-full px-4 py-3 rounded-xl mb-6"> <option value="user">User / Driver</option> <option value="admin">Administrator</option> </select> <button type="submit" class="btn-primary w-full py-3 rounded-xl font-medium mb-3">Sign In</button>
+     <form id="login-form" onsubmit="handleLogin(event)">
+      <label for="login-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label> <input id="login-username" type="text" placeholder="Enter username" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label> <input id="login-password" type="password" placeholder="Enter password" class="w-full px-4 py-3 rounded-xl mb-4" required> <label for="login-role" class="block text-sm font-medium text-gray-700 mb-1">Role</label> <select id="login-role" class="w-full px-4 py-3 rounded-xl mb-6"> <option value="user">User / Driver</option> <option value="admin">Administrator</option> </select> <button type="submit" class="btn-primary w-full py-3 rounded-xl font-medium mb-3">Sign In</button>
       <p class="text-sm text-center text-gray-600">Don't have an account? <button type="button" onclick="showScreen('register')" class="text-indigo-600 hover:text-indigo-700 font-medium">Register</button></p>
      </form>
     </div>
    </div><!-- DASHBOARD (User & Admin) -->
-   <div id="screen-dashboard" class="h-full w-full flex hidden"><!-- Sidebar -->
+   <div id="screen-dashboard" class="h-full w-full flex hidden">
+    <!-- Sidebar -->
     <aside id="sidebar" class="w-64 glass-strong h-full flex flex-col shrink-0 overflow-y-auto">
      <div class="p-5 border-b border-gray-200/50">
       <div class="flex items-center gap-3">
-       <div class="w-9 h-9 rounded-lg btn-primary flex items-center justify-center"><i data-lucide="truck" class="w-5 h-5 text-white"></i>
+       <div class="w-9 h-9 rounded-lg btn-primary flex items-center justify-center">
+        <i data-lucide="truck" class="w-5 h-5 text-white"></i>
        </div><span class="font-bold text-gray-800 text-sm">VMS</span>
       </div>
      </div>
      <nav id="sidebar-nav" class="flex-1 p-3 flex flex-col gap-1"></nav>
      <div class="p-4 border-t border-gray-200/50">
       <div class="flex items-center gap-3 mb-3">
-       <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center"><i data-lucide="user" class="w-4 h-4 text-indigo-600"></i>
+       <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center">
+        <i data-lucide="user" class="w-4 h-4 text-indigo-600"></i>
        </div>
        <div>
         <p id="sidebar-user" class="text-sm font-medium text-gray-800"></p>
@@ -293,13 +312,15 @@
    </div>
   </div>
   <script>
-    // ===== STATE =====
+    // ===== STATE & STORAGE =====
     let currentUser = null;
     let currentRole = null;
     let currentSection = 'dashboard';
     let allData = [];
     let recordCount = 0;
     let users = [];
+    const STORAGE_KEY = 'vms_data';
+    const USERS_KEY = 'vms_users';
 
     // ===== DEFAULT CONFIG =====
     const defaultConfig = {
@@ -314,87 +335,99 @@
         font_size: 16
     };
 
-    // ===== ELEMENT SDK =====
-    window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: async (config) => {
-            const title = config.system_title || defaultConfig.system_title;
-            const msg = config.welcome_message || defaultConfig.welcome_message;
-            const font = config.font_family || defaultConfig.font_family;
-            const size = config.font_size || defaultConfig.font_size;
-            const primary = config.primary_color || defaultConfig.primary_color;
-            const bg = config.background_color || defaultConfig.background_color;
-            const surface = config.surface_color || defaultConfig.surface_color;
-            const text = config.text_color || defaultConfig.text_color;
-            const secondary = config.secondary_color || defaultConfig.secondary_color;
+    // ===== INITIALIZATION =====
+    function initializeApp() {
+        loadFromStorage();
+        applyConfig();
+        lucide.createIcons();
+    }
 
-            document.body.style.fontFamily = `${font}, sans-serif`;
-            document.body.style.fontSize = `${size}px`;
+    function applyConfig() {
+        const config = defaultConfig;
+        const font = config.font_family || 'Outfit';
+        const size = config.font_size || 16;
 
-            const homeTitle = document.getElementById('home-title');
-            const homeSub = document.getElementById('home-subtitle');
-            if (homeTitle) homeTitle.textContent = title;
-            if (homeSub) homeSub.textContent = msg;
+        document.body.style.fontFamily = `${font}, sans-serif`;
+        document.body.style.fontSize = `${size}px`;
 
-            document.documentElement.style.setProperty('--primary', primary);
-            document.documentElement.style.setProperty('--bg', bg);
-            document.documentElement.style.setProperty('--surface', surface);
-            document.documentElement.style.setProperty('--text', text);
-            document.documentElement.style.setProperty('--secondary', secondary);
-        },
-        mapToCapabilities: (config) => ({
-            recolorables: [
-                { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
-                { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
-                { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
-                { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); } },
-                { get: () => config.secondary_color || defaultConfig.secondary_color, set: (v) => { config.secondary_color = v; window.elementSdk.setConfig({ secondary_color: v }); } }
-            ],
-            borderables: [],
-            fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
-            fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
-        }),
-        mapToEditPanelValues: (config) => new Map([
-            ['system_title', config.system_title || defaultConfig.system_title],
-            ['welcome_message', config.welcome_message || defaultConfig.welcome_message]
-        ])
-    });
+        document.documentElement.style.setProperty('--primary', config.primary_color);
+        document.documentElement.style.setProperty('--bg', config.background_color);
+        document.documentElement.style.setProperty('--surface', config.surface_color);
+        document.documentElement.style.setProperty('--text', config.text_color);
+        document.documentElement.style.setProperty('--secondary', config.secondary_color);
 
-    // ===== DATA SDK =====
-    const dataHandler = {
-        onDataChanged(data) {
-            allData = data;
-            recordCount = data.length;
-            if (currentUser && document.getElementById('screen-dashboard').classList.contains('hidden') === false) {
-                renderCurrentSection();
-            }
+        const homeTitle = document.getElementById('home-title');
+        const homeSub = document.getElementById('home-subtitle');
+        if (homeTitle) homeTitle.textContent = config.system_title;
+        if (homeSub) homeSub.textContent = config.welcome_message;
+    }
+
+    // ===== LOCAL STORAGE =====
+    function loadFromStorage() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        allData = stored ? JSON.parse(stored) : [];
+        recordCount = allData.length;
+
+        const storedUsers = localStorage.getItem(USERS_KEY);
+        users = storedUsers ? JSON.parse(storedUsers) : [];
+    }
+
+    function saveToStorage() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(allData));
+    }
+
+    function saveUsers() {
+        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    }
+
+    function createRecord(record) {
+        if (allData.length >= 999) {
+            showToast('Record limit reached (999). Please delete some records.', 'error');
+            return null;
         }
-    };
-    window.dataSdk.init(dataHandler);
+        const id = 'id_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        const fullRecord = { ...record, __backendId: id, created_at: new Date().toISOString() };
+        allData.push(fullRecord);
+        recordCount = allData.length;
+        saveToStorage();
+        return fullRecord;
+    }
+
+    function updateRecord(id, updates) {
+        const idx = allData.findIndex(d => d.__backendId === id);
+        if (idx !== -1) {
+            allData[idx] = { ...allData[idx], ...updates };
+            saveToStorage();
+            return true;
+        }
+        return false;
+    }
+
+    function deleteRecord(id) {
+        const idx = allData.findIndex(d => d.__backendId === id);
+        if (idx !== -1) {
+            allData.splice(idx, 1);
+            recordCount = allData.length;
+            saveToStorage();
+            return true;
+        }
+        return false;
+    }
 
     // ===== NAVIGATION =====
     function showScreen(name) {
         ['home','portal','login','register','dashboard'].forEach(s => {
-            document.getElementById('screen-' + s).classList.add('hidden');
+            const el = document.getElementById('screen-' + s);
+            if (el) el.classList.add('hidden');
         });
-        document.getElementById('screen-' + name).classList.remove('hidden');
+        const target = document.getElementById('screen-' + name);
+        if (target) target.classList.remove('hidden');
         lucide.createIcons();
-    }
-
-    function loginAs(role) {
-        currentUser = role === 'admin' ? 'Administrator' : 'Driver';
-        currentRole = role;
-        document.getElementById('sidebar-user').textContent = currentUser;
-        document.getElementById('sidebar-role').textContent = role === 'admin' ? 'Admin' : 'User';
-        buildSidebar();
-        currentSection = 'dashboard';
-        renderCurrentSection();
-        showScreen('dashboard');
     }
 
     function selectPortal(role) {
         currentRole = role;
-        showScreen(role === 'admin' ? 'login' : 'login');
+        showScreen('login');
     }
 
     function handleRegister(e) {
@@ -404,7 +437,8 @@
         const password = document.getElementById('reg-password').value;
         const role = document.getElementById('reg-role').value;
         
-        users.push({username, email, password, role});
+        users.push({ username, email, password, role });
+        saveUsers();
         showToast('Account created! Please sign in.');
         document.getElementById('register-form').reset();
         showScreen('login');
@@ -433,6 +467,7 @@
     // ===== TOAST =====
     function showToast(msg, type='success') {
         const c = document.getElementById('toast-container');
+        if (!c) return;
         const t = document.createElement('div');
         t.className = `toast glass-strong rounded-xl px-4 py-3 shadow-lg flex items-center gap-2 text-sm ${type==='error'?'text-red-600':'text-green-700'}`;
         t.innerHTML = `<i data-lucide="${type==='error'?'alert-circle':'check-circle'}" class="w-4 h-4"></i> ${msg}`;
@@ -466,6 +501,7 @@
 
     function buildSidebar() {
         const nav = document.getElementById('sidebar-nav');
+        if (!nav) return;
         const menu = currentRole === 'admin' ? adminMenu : userMenu;
         nav.innerHTML = menu.map(m => `
             <button onclick="navigateTo('${m.id}')" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-gray-700 w-full text-left ${currentSection===m.id?'active':''}">
@@ -484,6 +520,7 @@
     // ===== RENDER =====
     function renderCurrentSection() {
         const main = document.getElementById('main-content');
+        if (!main) return;
         if (currentRole === 'admin') {
             switch(currentSection) {
                 case 'dashboard': main.innerHTML = renderAdminDashboard(); break;
@@ -583,7 +620,7 @@
                             <option ${v.vehicle_status==='in-use'?'selected':''}>in-use</option>
                             <option ${v.vehicle_status==='maintenance'?'selected':''}>maintenance</option>
                         </select>
-                        <button onclick="deleteRecord('${v.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                        <button onclick="deleteRecordFn('${v.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                     </div>
                 </div>`).join('') || '<p class="text-sm text-gray-400">No vehicles added</p>'}
             </div>
@@ -606,7 +643,7 @@
             <div class="space-y-2">
                 ${drivers.map(d=>`<div class="flex items-center justify-between p-3 bg-white/50 rounded-xl">
                     <div><p class="font-medium text-sm text-gray-800">${d.driver_name}</p><p class="text-xs text-gray-500">Vehicle: ${d.vehicle_plate||'Unassigned'}</p></div>
-                    <button onclick="deleteRecord('${d.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                    <button onclick="deleteRecordFn('${d.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                 </div>`).join('') || '<p class="text-sm text-gray-400">No drivers registered</p>'}
             </div>
         </div>`;
@@ -635,7 +672,7 @@
                             <option ${t.trip_status==='active'?'selected':''}>active</option>
                             <option ${t.trip_status==='completed'?'selected':''}>completed</option>
                         </select>
-                        <button onclick="deleteRecord('${t.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                        <button onclick="deleteRecordFn('${t.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                     </div>
                 </div>`).join('') || '<p class="text-sm text-gray-400">No trips scheduled</p>'}
             </div>
@@ -657,7 +694,7 @@
             <div class="space-y-2">
                 ${fuel.slice(-10).reverse().map(f=>`<div class="flex items-center justify-between p-3 bg-white/50 rounded-xl">
                     <div><p class="font-medium text-sm text-gray-800">${f.vehicle_name||'Vehicle'} - ${f.fuel_amount}L</p><p class="text-xs text-gray-500">$${f.fuel_cost} • ${f.created_at?.split('T')[0]||''}</p></div>
-                    <button onclick="deleteRecord('${f.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                    <button onclick="deleteRecordFn('${f.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                 </div>`).join('') || '<p class="text-sm text-gray-400">No fuel records</p>'}
             </div>
         </div>`;
@@ -683,7 +720,7 @@
                             <option ${i.issue_priority==='low'?'selected':''}>low</option>
                             <option ${i.issue_priority==='resolved'?'selected':''}>resolved</option>
                         </select>
-                        <button onclick="deleteRecord('${i.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                        <button onclick="deleteRecordFn('${i.__backendId}')" class="text-red-400 hover:text-red-600"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                     </div>
                 </div>`).join('') || '<p class="text-sm text-gray-400">No issues reported</p>'}
             </div>
@@ -754,7 +791,7 @@
         return `${sectionHeader('Settings','System configuration')}
         <div class="glass-card rounded-2xl p-5">
             <h3 class="font-semibold text-gray-800 mb-3">General Settings</h3>
-            <p class="text-sm text-gray-500 mb-4">System settings can be configured via the edit panel in Canva.</p>
+            <p class="text-sm text-gray-500 mb-4">System settings can be configured.</p>
             <div class="space-y-3">
                 <div class="flex justify-between items-center p-3 bg-white/50 rounded-xl">
                     <span class="text-sm text-gray-700">Total Records</span>
@@ -856,13 +893,13 @@
         const myFuel = getByType('fuel').filter(f=>f.username===currentUser);
         return `${sectionHeader('Fuel Log','Log fuel usage for your trips')}
         <div class="glass-card rounded-2xl p-5 mb-4">
+            <h3 class="font-semibold text-gray-800 mb-3">New Entry</h3>
             <form onsubmit="addFuelLog(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div><label for="fl-vehicle" class="text-xs text-gray-500">Vehicle</label><input id="fl-vehicle" placeholder="Vehicle name" class="w-full px-3 py-2 rounded-lg text-sm" required></div>
                 <div><label for="fl-amount" class="text-xs text-gray-500">Liters</label><input id="fl-amount" type="number" step="0.1" placeholder="0" class="w-full px-3 py-2 rounded-lg text-sm" required></div>
                 <div><label for="fl-cost" class="text-xs text-gray-500">Cost ($)</label><input id="fl-cost" type="number" step="0.01" placeholder="0.00" class="w-full px-3 py-2 rounded-lg text-sm" required></div>
             </form>
-            <button onclick="document.querySelector('#fuel-log-form-btn').click()" class="btn-primary px-4 py-2 rounded-lg text-sm mt-3 w-full">Log Fuel</button>
-            <button id="fuel-log-form-btn" type="submit" form="none" class="hidden"></button>
+            <button onclick="submitFuelLog()" class="btn-primary px-4 py-2 rounded-lg text-sm mt-3 w-full">Log Fuel</button>
         </div>
         <div class="glass-card rounded-2xl p-5">
             <h3 class="font-semibold text-gray-800 mb-3">My Fuel Records</h3>
@@ -915,93 +952,106 @@
     }
 
     // ===== DATA ACTIONS =====
-    async function checkLimit() {
-        if (recordCount >= 999) { showToast('Record limit reached (999). Please delete some records.','error'); return false; }
-        return true;
-    }
-
-    async function addVehicle(e) {
+    function addVehicle(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Adding...';
-        const r = await window.dataSdk.create({ type:'vehicle', vehicle_name: document.getElementById('v-name').value, vehicle_plate: document.getElementById('v-plate').value, vehicle_status:'available', created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Add Vehicle';
-        if (r.isOk) { showToast('Vehicle added'); e.target.reset(); } else showToast('Error adding vehicle','error');
+        btn.disabled = true;
+        btn.textContent = 'Adding...';
+        const rec = createRecord({ type:'vehicle', vehicle_name: document.getElementById('v-name').value, vehicle_plate: document.getElementById('v-plate').value, vehicle_status:'available' });
+        btn.disabled = false;
+        btn.textContent = 'Add Vehicle';
+        if (rec) { showToast('Vehicle added'); e.target.reset(); renderCurrentSection(); } else showToast('Error adding vehicle','error');
     }
 
-    async function addDriver(e) {
+    function addDriver(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Adding...';
-        const r = await window.dataSdk.create({ type:'driver', driver_name: document.getElementById('d-name').value, vehicle_plate: document.getElementById('d-vehicle').value, created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Register';
-        if (r.isOk) { showToast('Driver registered'); e.target.reset(); } else showToast('Error','error');
+        btn.disabled = true;
+        btn.textContent = 'Adding...';
+        const rec = createRecord({ type:'driver', driver_name: document.getElementById('d-name').value, vehicle_plate: document.getElementById('d-vehicle').value });
+        btn.disabled = false;
+        btn.textContent = 'Register';
+        if (rec) { showToast('Driver registered'); e.target.reset(); renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function addTrip(e) {
+    function addTrip(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Scheduling...';
-        const r = await window.dataSdk.create({ type:'trip', trip_from: document.getElementById('t-from').value, trip_to: document.getElementById('t-to').value, trip_date: document.getElementById('t-date').value, trip_status:'scheduled', username: currentUser, created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Schedule';
-        if (r.isOk) { showToast('Trip scheduled'); e.target.reset(); } else showToast('Error','error');
+        btn.disabled = true;
+        btn.textContent = 'Scheduling...';
+        const rec = createRecord({ type:'trip', trip_from: document.getElementById('t-from').value, trip_to: document.getElementById('t-to').value, trip_date: document.getElementById('t-date').value, trip_status:'scheduled', driver_name: '' });
+        btn.disabled = false;
+        btn.textContent = 'Schedule';
+        if (rec) { showToast('Trip scheduled'); e.target.reset(); renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function requestVehicle(e) {
+    function requestVehicle(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Submitting...';
-        const r = await window.dataSdk.create({ type:'trip', trip_from: document.getElementById('rv-from').value, trip_to: document.getElementById('rv-to').value, trip_date: document.getElementById('rv-date').value, trip_status:'scheduled', username: currentUser, created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Submit Request';
-        if (r.isOk) { showToast('Vehicle requested'); e.target.reset(); } else showToast('Error','error');
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
+        const rec = createRecord({ type:'trip', trip_from: document.getElementById('rv-from').value, trip_to: document.getElementById('rv-to').value, trip_date: document.getElementById('rv-date').value, trip_status:'scheduled', username: currentUser });
+        btn.disabled = false;
+        btn.textContent = 'Submit Request';
+        if (rec) { showToast('Vehicle requested'); e.target.reset(); renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function reportIssue(e) {
+    function reportIssue(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Submitting...';
-        const r = await window.dataSdk.create({ type:'issue', vehicle_name: document.getElementById('ri-vehicle').value, issue_priority: document.getElementById('ri-priority').value, issue_description: document.getElementById('ri-desc').value, username: currentUser, created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Submit Report';
-        if (r.isOk) { showToast('Issue reported'); e.target.reset(); } else showToast('Error','error');
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
+        const rec = createRecord({ type:'issue', vehicle_name: document.getElementById('ri-vehicle').value, issue_priority: document.getElementById('ri-priority').value, issue_description: document.getElementById('ri-desc').value, username: currentUser });
+        btn.disabled = false;
+        btn.textContent = 'Submit Report';
+        if (rec) { showToast('Issue reported'); e.target.reset(); renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function addFuelLog(e) {
+    function addFuelLog(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
-        const r = await window.dataSdk.create({ type:'fuel', vehicle_name: document.getElementById('fl-vehicle').value, fuel_amount: parseFloat(document.getElementById('fl-amount').value), fuel_cost: parseFloat(document.getElementById('fl-cost').value), username: currentUser, created_at: new Date().toISOString() });
-        if (r.isOk) { showToast('Fuel logged'); document.getElementById('fl-vehicle').value=''; document.getElementById('fl-amount').value=''; document.getElementById('fl-cost').value=''; } else showToast('Error','error');
+        const rec = createRecord({ type:'fuel', vehicle_name: document.getElementById('fl-vehicle').value, fuel_amount: parseFloat(document.getElementById('fl-amount').value), fuel_cost: parseFloat(document.getElementById('fl-cost').value), username: currentUser });
+        if (rec) { showToast('Fuel logged'); document.getElementById('fl-vehicle').value=''; document.getElementById('fl-amount').value=''; document.getElementById('fl-cost').value=''; renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function makePayment(e) {
+    function submitFuelLog() {
+        const e = { target: { querySelector: () => ({ disabled: false }) } };
+        addFuelLog(e);
+    }
+
+    function makePayment(e) {
         e.preventDefault();
-        if (!await checkLimit()) return;
         const btn = e.target.querySelector('button[type=submit]');
-        btn.disabled = true; btn.textContent = 'Processing...';
-        const r = await window.dataSdk.create({ type:'payment', payment_amount: parseFloat(document.getElementById('pm-amount').value), payment_method: document.getElementById('pm-method').value, username: currentUser, created_at: new Date().toISOString() });
-        btn.disabled = false; btn.textContent = 'Pay';
-        if (r.isOk) { showToast('Payment recorded'); e.target.reset(); } else showToast('Error','error');
+        btn.disabled = true;
+        btn.textContent = 'Processing...';
+        const rec = createRecord({ type:'payment', payment_amount: parseFloat(document.getElementById('pm-amount').value), payment_method: document.getElementById('pm-method').value, username: currentUser });
+        btn.disabled = false;
+        btn.textContent = 'Pay';
+        if (rec) { showToast('Payment recorded'); e.target.reset(); renderCurrentSection(); } else showToast('Error','error');
     }
 
-    async function updateVehicleStatus(id, status) {
-        const rec = allData.find(d=>d.__backendId===id);
-        if (rec) { rec.vehicle_status = status; await window.dataSdk.update(rec); }
+    function updateVehicleStatus(id, status) {
+        if (updateRecord(id, { vehicle_status: status })) {
+            renderCurrentSection();
+        }
     }
-    async function updateTripStatus(id, status) {
-        const rec = allData.find(d=>d.__backendId===id);
-        if (rec) { rec.trip_status = status; await window.dataSdk.update(rec); }
+
+    function updateTripStatus(id, status) {
+        if (updateRecord(id, { trip_status: status })) {
+            renderCurrentSection();
+        }
     }
-    async function updateIssuePriority(id, priority) {
-        const rec = allData.find(d=>d.__backendId===id);
-        if (rec) { rec.issue_priority = priority; await window.dataSdk.update(rec); }
+
+    function updateIssuePriority(id, priority) {
+        if (updateRecord(id, { issue_priority: priority })) {
+            renderCurrentSection();
+        }
     }
-    async function deleteRecord(id) {
-        const rec = allData.find(d=>d.__backendId===id);
-        if (rec) { const r = await window.dataSdk.delete(rec); if(r.isOk) showToast('Deleted'); }
+
+    function deleteRecordFn(id) {
+        if (deleteRecord(id)) {
+            showToast('Deleted');
+            renderCurrentSection();
+        }
     }
 
     function exportCSV() {
@@ -1017,8 +1067,8 @@
         showToast('Report downloaded');
     }
 
-    // Init icons
-    lucide.createIcons();
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a04eff599a1a0058',t:'MTc4MDMyNTA3OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', initializeApp);
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a04f12120950117e',t:'MTc4MDMyNTg0NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
