@@ -95,15 +95,10 @@
         ::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.3); border-radius: 3px; }
     </style>
   <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- <script src="/_sdk/telemetry_sdk.js"></script></head>
+ </head>
  <body class="h-full bg-main overflow-hidden">
   <div id="app" class="h-full w-full overflow-auto">
-   <!-- TOAST -->
-   <div id="toast-container" class="fixed top-4 right-4 z-[9999] flex flex-col gap-2"></div><!-- HOME SCREEN -->
-   <div id="screen-home" class="h-full w-full flex flex-col overflow-y-auto"><!-- Header -->
-    <header class="glass-strong sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
+   <div id="toast-container" class="fixed top-4 right-4 z-[9999] flex flex-col gap-2"></div><div id="screen-home" class="h-full w-full flex flex-col overflow-y-auto"><header class="glass-strong sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
      <div class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-lg btn-primary flex items-center justify-center">
        <i data-lucide="truck" class="w-6 h-6 text-white"></i>
@@ -111,8 +106,7 @@
      </div>
      <div class="flex items-center gap-3"><button onclick="showScreen('login')" class="btn-secondary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="log-in" class="w-4 h-4"></i> Sign In </button> <button onclick="showScreen('register')" class="btn-primary px-4 py-2 rounded-lg text-sm flex items-center gap-2"> <i data-lucide="user-plus" class="w-4 h-4"></i> Register </button>
      </div>
-    </header><!-- Hero -->
-    <section class="px-6 py-12 flex-1">
+    </header><section class="px-6 py-12 flex-1">
      <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
        <div class="fade-in">
@@ -152,8 +146,7 @@
          </div>
         </div>
        </div>
-      </div><!-- Features -->
-      <div id="features" class="mb-12">
+      </div><div id="features" class="mb-12">
        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Features</h2>
        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="glass-card rounded-2xl p-5 stat-card">
@@ -199,14 +192,12 @@
          <p class="text-sm text-gray-500">Generate comprehensive reports and export data</p>
         </div>
        </div>
-      </div><!-- Testimonial -->
-      <div class="glass-card rounded-2xl p-8 mb-12 text-center">
+      </div><div class="glass-card rounded-2xl p-8 mb-12 text-center">
        <p class="text-lg text-gray-700 mb-4 italic">"VMS has transformed how we manage our fleet. Real-time tracking and fuel monitoring have reduced costs by 20%."</p>
        <p class="font-semibold text-gray-800">Fleet Manager, Logistics Company</p>
       </div>
      </div>
-    </section><!-- Footer -->
-    <footer class="glass-strong border-t border-gray-200/50 px-6 py-6 mt-auto">
+    </section><footer class="glass-strong border-t border-gray-200/50 px-6 py-6 mt-auto">
      <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
        <div>
@@ -249,8 +240,7 @@
       </div>
      </div>
     </footer>
-   </div><!-- PORTAL -->
-   <div id="screen-portal" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
+   </div><div id="screen-portal" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
     <div class="glass-strong rounded-3xl p-10 max-w-2xl w-full shadow-xl">
      <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Select Portal</h2>
@@ -264,8 +254,7 @@
        </div><h3 class="font-semibold text-gray-800">Admin Panel</h3><p class="text-sm text-gray-500 mt-1">Fleet management access</p></button>
      </div>
     </div>
-   </div><!-- REGISTER -->
-   <div id="screen-register" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
+   </div><div id="screen-register" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
     <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl">
      <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6">Create Account</h2>
@@ -274,8 +263,7 @@
       <p class="text-sm text-center text-gray-600">Already have an account? <button type="button" onclick="showScreen('login')" class="text-indigo-600 hover:text-indigo-700 font-medium">Sign In</button></p>
      </form>
     </div>
-   </div><!-- LOGIN -->
-   <div id="screen-login" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
+   </div><div id="screen-login" class="h-full w-full flex flex-col items-center justify-center p-6 fade-in hidden">
     <div class="glass-strong rounded-3xl p-8 max-w-md w-full shadow-xl">
      <button onclick="showScreen('home')" class="mb-6 text-gray-500 hover:text-indigo-600 flex items-center gap-1 text-sm"> <i data-lucide="arrow-left" class="w-4 h-4"></i> Back </button>
      <h2 class="text-2xl font-bold text-gray-800 mb-6">Sign In</h2>
@@ -284,9 +272,7 @@
       <p class="text-sm text-center text-gray-600">Don't have an account? <button type="button" onclick="showScreen('register')" class="text-indigo-600 hover:text-indigo-700 font-medium">Register</button></p>
      </form>
     </div>
-   </div><!-- DASHBOARD (User & Admin) -->
-   <div id="screen-dashboard" class="h-full w-full flex hidden">
-    <!-- Sidebar -->
+   </div><div id="screen-dashboard" class="h-full w-full flex hidden">
     <aside id="sidebar" class="w-64 glass-strong h-full flex flex-col shrink-0 overflow-y-auto">
      <div class="p-5 border-b border-gray-200/50">
       <div class="flex items-center gap-3">
@@ -307,8 +293,7 @@
        </div>
       </div><button onclick="logout()" class="w-full text-left text-sm text-red-500 hover:text-red-700 flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-red-50 transition-colors"> <i data-lucide="log-out" class="w-4 h-4"></i> Sign Out </button>
      </div>
-    </aside><!-- Main Content -->
-    <main id="main-content" class="flex-1 h-full overflow-y-auto p-6"></main>
+    </aside><main id="main-content" class="flex-1 h-full overflow-y-auto p-6"></main>
    </div>
   </div>
   <script>
@@ -787,24 +772,6 @@
         </div>`;
     }
 
-    function renderSettings() {
-        return `${sectionHeader('Settings','System configuration')}
-        <div class="glass-card rounded-2xl p-5">
-            <h3 class="font-semibold text-gray-800 mb-3">General Settings</h3>
-            <p class="text-sm text-gray-500 mb-4">System settings can be configured.</p>
-            <div class="space-y-3">
-                <div class="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                    <span class="text-sm text-gray-700">Total Records</span>
-                    <span class="text-sm font-medium">${recordCount} / 999</span>
-                </div>
-                <div class="flex justify-between items-center p-3 bg-white/50 rounded-xl">
-                    <span class="text-sm text-gray-700">Current User</span>
-                    <span class="text-sm font-medium">${currentUser}</span>
-                </div>
-            </div>
-        </div>`;
-    }
-
     // ===== USER VIEWS =====
     function renderUserDashboard() {
         const trips = getByType('trip');
@@ -1070,5 +1037,5 @@
     // Initialize on page load
     window.addEventListener('DOMContentLoaded', initializeApp);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a04f12120950117e',t:'MTc4MDMyNTg0NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ </body>
 </html>
